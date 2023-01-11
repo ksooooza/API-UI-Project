@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Poke from './Poke.jsx';
+import './App.css'
+import Modal from './Components/Modal.js'
 
 function App() {
+  const [ openModal, setOpenModal ] = useState(false)
+  const [pokemon, setPokemon] = useState("")
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header><h1>The Funky Poke API</h1></header>
+      <Poke setPokemon={setPokemon} setOpenModal={setOpenModal}/>
+      {openModal && <Modal pokemon={pokemon} closeModal={setOpenModal}/>}
     </div>
   );
 }
 
 export default App;
+
+{/* <button
+      className="openModalBtn" onClick={() => {setOpenModal(true)}}>Open</button> */}
