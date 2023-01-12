@@ -22,7 +22,7 @@ function Poke({setPokemon, setOpenModal}) {
     return(
         <div>
         {pokemons.map((pokemon) => (
-            <button key={pokemon.name} onClick={() => handleClick(pokemon.name)}>{pokemon.name}</button>
+            <button className="buttons" key={pokemon.name} onClick={() => handleClick(pokemon.name)}>{pokemon.name}</button>
             ))}
         </div>
     )

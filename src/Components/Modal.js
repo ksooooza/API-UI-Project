@@ -20,7 +20,7 @@ function Modal({ closeModal, pokemon }) {
             habitat: statsResponse.data.habitat.name,
             isLegendary: statsResponse.data["is_legendary"],
             shape: statsResponse.data.shape.name,
-            evolvesFrom: statsResponse.data["evolves_from_species"],
+            evolvesFrom: statsResponse.data["evolves_from_species"].name
         }
         
         setImage(artResponse.data.sprites.other["official-artwork"]["front_default"])
@@ -31,9 +31,24 @@ function Modal({ closeModal, pokemon }) {
         <div className="modalBackground">
             <div className="modalContainer">
                 <button onClick={() => closeModal(false)}>X</button>
-                <div className="title"><h2>Name of Pokemon</h2></div>
+                <div className="title"><h2>{pokemon}</h2></div>
                 <div className="body">
                     <img src={image} />
+                    <br />
+                    <p>
+                        color: {true ? pokeStats.color : "No data on color"}
+                        <br />
+                        Flavor Text: {true ? pokeStats.flavorText : "No flavor text"}
+                        <br />
+                        Habitat: {true ? pokeStats.habitat : "No data on habitat"}
+                        <br />
+                        Legendary: {pokeStats.isLegendary ? "True" : "Not legendary"}
+                        <br />
+                        Shape: {true ? pokeStats.shape : "No data on shape"}
+                        <br />
+                        Evolves From: {pokeStats.evolvesFrom ? pokeStats.evolvesFrom : "Base Form"}
+                        <br />
+                    </p>
                 </div>
             </div>
         </div>

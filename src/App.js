@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <header><h1>The Funky Poke API</h1></header>
+      <h1>The Funky Poke API</h1>
       <Poke setPokemon={setPokemon} setOpenModal={setOpenModal}/>
       {openModal && <Modal pokemon={pokemon} closeModal={setOpenModal}/>}
     </div>
@@ -18,6 +18,3 @@ function App() {
 }
 
 export default App;
-
-{/* <button
-      className="openModalBtn" onClick={() => {setOpenModal(true)}}>Open</button> */}

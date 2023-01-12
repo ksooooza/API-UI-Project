@@ -1,15 +1,25 @@
+body {
+  background-color: #bd93bd;
+  font-family: 'Shadows Into Light', cursive;
+  color: #183642;
+}
 .modalBackground {
   width: 100vw;
   height: 100vh;
   position: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .modalContainer {
-  width: 500px;
-  height: 500px;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  width: 800px;
+  height: 800px;
   border-radius: 12px;
   background-color: white;
   box-shadow: rgba(0,0,0,0.35);
@@ -42,6 +52,11 @@
   text-align: center;
 }
 
-.openModalButton {
-  background-color: transparent 50%;
+.buttons {
+  background-color: #379392;
+  border-radius: 5px;
+  color: #d9e5d6;
+  height: 80px;
+  width: 80px;
+  font-family: 'Shadows Into Light', cursive;
 }
