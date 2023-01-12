@@ -36,7 +36,7 @@ function Modal({ closeModal, pokemon }) {
                     <img src={image} />
                     <br />
                     <p>
-                        color: {true ? pokeStats.color : "No data on color"}
+                        Color: {true ? pokeStats.color : "No data on color"}
                         <br />
                         Flavor Text: {true ? pokeStats.flavorText : "No flavor text"}
                         <br />
@@ -46,7 +46,7 @@ function Modal({ closeModal, pokemon }) {
                         <br />
                         Shape: {true ? pokeStats.shape : "No data on shape"}
                         <br />
-                        Evolves From: {pokeStats.evolvesFrom ? pokeStats.evolvesFrom : "Base Form"}
+                        Evolves From: {(pokeStats.evolvesFrom == null) ? "Base form" : pokeStats.evolvesFrom}
                         <br />
                     </p>
                 </div>

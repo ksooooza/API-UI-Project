@@ -12,20 +12,20 @@ body {
 }
 
 .modalContainer {
-  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   overflow: auto;
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   border-radius: 12px;
   background-color: white;
   box-shadow: rgba(0,0,0,0.35);
   display: flex;
   flex-direction: column;
   padding: 25px;
+  background-color: #d9e5d6;
 }
 
 .modalContainer .title {
@@ -56,7 +56,7 @@ body {
   background-color: #379392;
   border-radius: 5px;
   color: #d9e5d6;
-  height: 80px;
-  width: 80px;
+  height: 75px;
+  width: 75px;
   font-family: 'Shadows Into Light', cursive;
 }
